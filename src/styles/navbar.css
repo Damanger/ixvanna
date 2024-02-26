@@ -1,13 +1,13 @@
 .cabecera{
-    background: lightblue;
+    background: #7a647a;
     height: 2rem;
 }
 
 .navbar-nav {
     display: flex;
+    padding-top: 0.1rem;
     justify-content: space-between;
     align-items: center;
-    margin-left: 2rem;
     text-align: center;
 }
 
@@ -15,16 +15,30 @@
     text-decoration: none;
     color: inherit;
     display: inline-flex;
+    margin-left: 2rem;
 }
+
+.navbar-nav-link img{
+    width: 10rem;
+}
+
+@media (max-width: 430px) {
+    .navbar-nav-link img {
+        width: 5rem;
+        margin-left: -1rem;
+    }
+    .navbar-right-links{
+        font-size: 0.75rem;
+    }
+} 
 
 .navbar-right-links {
     display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
     margin-right: 2rem;
 }  
-
-.navigation {
-    margin-right: 2rem;
-}
 
 .activo {
     background-color: rgba(0, 0, 0, 0.5);
@@ -32,6 +46,6 @@
     padding: 0.5rem;
 }
 
-.redes-sociales {
-    gap: 0.5rem;
+.redes{
+    margin-left: 0.75rem;
 }  

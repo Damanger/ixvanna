@@ -10,9 +10,9 @@ export default function Navbar(){
     // Efecto para actualizar el estilo activo cuando cambia la ubicación
     useEffect(() => {
         if (location.pathname === "/") {
-            setActiveStyle({ borderBottom: "0.2rem solid darkblue" });
+            setActiveStyle({ borderBottom: "0.2rem solid white" });
         } else if (location.pathname === "/designs") {
-            setActiveStyle({ borderBottom: "0.2rem solid darkred" });
+            setActiveStyle({ borderBottom: "0.2rem solid white" });
         } else {
             setActiveStyle({});
         }
@@ -22,24 +22,22 @@ export default function Navbar(){
 
     return(
         <header className="cabecera">
-            <div>
-                <nav className='navbar-nav'>
-                    <NavLink to='/' className='navbar-nav-link'>
-                        Ixvanna
+            <nav className='navbar-nav'>
+                <NavLink to='/' className='navbar-nav-link'>
+                    <img src="./ixvanna_titulo.jpeg" alt="Ixvanna" />
+                </NavLink>
+                <div className='navbar-right-links'>
+                    <NavLink to='/' activeclassname="activo" className='navbar-nav-link' style={location.pathname === "/" ? activeStyle : {}}>
+                        Inicio
                     </NavLink>
-                    <div className='navbar-right-links'>
-                        <NavLink to='/' activeclassname="activo" className='navbar-nav-link navigation' style={location.pathname === "/" ? activeStyle : {}}>
-                            Inicio
-                        </NavLink>
-                        <NavLink to='/designs' activeclassname="activo" className='navbar-nav-link navigation' style={location.pathname === "/designs" ? activeStyle : {}}>
-                            Diseños
-                        </NavLink>
-                        <SocialIcon url="https://www.facebook.com/Ixvanna?mibextid=kFxxJD" className="mr-4" target="_blank" fgColor="#fff" style={{height: 30, width: 30}}></SocialIcon>
-                        <SocialIcon url={`https://wa.me/529511943244?text=${mensaje}`} network="whatsapp" className="mr-4" target="_blank" fgColor="#fff" style={{height: 30, width: 30}}></SocialIcon>
-                        <SocialIcon url="https://www.instagram.com/ixvannadisenos?igsh=MWtmb2MwbDFldTh1Ng==" className="mr-4" target="_blank" fgColor="#fff" style={{height: 30, width: 30}}></SocialIcon>
-                    </div>
-                </nav>
-            </div>
+                    <NavLink to='/designs' activeclassname="activo" className='navbar-nav-link' style={location.pathname === "/designs" ? activeStyle : {}}>
+                        Diseños
+                    </NavLink>
+                    <SocialIcon url="https://www.facebook.com/Ixvanna?mibextid=kFxxJD" className="redes" target="_blank" fgColor="#fff" style={{height:28, width:28}}></SocialIcon>
+                    <SocialIcon url={`https://wa.me/529511943244?text=${mensaje}`} network="whatsapp" className="redes" target="_blank" fgColor="#fff" style={{height:28, width:28}}></SocialIcon>
+                    <SocialIcon url="https://www.instagram.com/ixvannadisenos?igsh=MWtmb2MwbDFldTh1Ng==" className="redes" target="_blank" fgColor="#fff" style={{height:28, width:28}}></SocialIcon>
+                </div>
+            </nav>
         </header>
     )
 }

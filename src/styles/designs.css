@@ -10,6 +10,7 @@ article{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -18,6 +19,10 @@ article{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .card:hover .card-image {
+        transform: none;
+        background-color: rgb(236, 236, 236);
     }
 }
 
