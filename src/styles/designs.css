@@ -10,7 +10,6 @@ article{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -31,6 +30,7 @@ article{
     background: white;
     padding: 0.4em;
     border-radius: 0.3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .card-image {
@@ -61,18 +61,10 @@ article{
     padding: 10px 7px 0;
 }
 
-.category:hover {
-    cursor: pointer;
-}
-
 .heading {
     font-weight: 600;
     color: rgb(88, 87, 87);
     padding: 7px;
-}
-
-.heading:hover {
-    cursor: pointer;
 }
 
 .author {
@@ -84,8 +76,4 @@ article{
 
 .name {
     font-weight: 600;
-}
-
-.name:hover {
-    cursor: pointer;
 }
