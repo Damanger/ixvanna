@@ -5,7 +5,7 @@ import '../styles/banner.css'
 export default function Banner(){
     return(
         <>
-            
+            f
         </>
     )
 }

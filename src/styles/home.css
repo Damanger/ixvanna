@@ -1,3 +1,73 @@
 section h1, h2{
     margin-left: 2rem;
 }
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.section-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.disenios {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: #7a647a;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+}
+
+.disenios:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+    
+.disenios:hover:not(:disabled) {
+    background: #7a647a;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.disenios:disabled {
+    cursor: auto;
+    color: grey;
+}
+
+.quotes-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.quote-item {
+    text-align: center;
+}
+
+.user-image {
+    border-radius: 50%;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    color: grey;
+}

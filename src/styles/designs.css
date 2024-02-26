@@ -77,3 +77,25 @@ article{
 .name {
     font-weight: 600;
 }
+
+.author p{
+    color: gray !important;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInFromLeft 1s ease forwards;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

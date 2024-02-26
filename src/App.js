@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Designs from './components/Designs';
 import Error from './components/Error';
 import Cargando from './components/Cargando';
+import Footer from './components/Footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
           <Route path="/designs" element={<Designs/>} />
           <Route path="*" element={[<Navigate key="redirect" to="/not-found" />, <Error key="error" />,]}/>
         </Routes>
+        <Footer/>
       </>
       )}
     </Router>
