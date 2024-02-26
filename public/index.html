@@ -25,22 +25,34 @@
       outline: none;
     }
 
-    #toggleButton .far {
-      color: black;
-    }
-
-    #toggleButton .far.fa-moon {
+    #toggleButton .far.fa-moon, #toggleButton .far.fa-sun {
       color: white;
     }
 
-    body[style*="background-color: black"] h1, body[style*="background-color: black"] h2 {
+    :root {
+      --background-color: aliceblue;
+      --text-color: #030712;
+    }
+
+    body {
+      background-color: var(--background-color);
+    }
+
+    body[style*="background-color: var(--text-color)"] h1,
+    body[style*="background-color: var(--text-color)"] h2 {
       color: aliceblue;
     }
+
+    @media (max-width: 768px) {
+    #toggleButton{
+      font-size: 0.5rem;
+    }
+}
   </style>
 </head>
-<body style="background-color: aliceblue;">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <button id="toggleButton">
+  <button id="toggleButton" style="position: absolute; margin-top: 0.5rem; right: 0%; margin-right: 0.8rem;">
     <i class="far fa-sun" id="icon"></i>
   </button>
   <div id="root"></div>
@@ -53,7 +65,7 @@
       isDayMode = !isDayMode;
 
       // Cambiar el color del fondo del body
-      document.body.style.backgroundColor = isDayMode ? 'aliceblue' : 'black';
+      document.body.style.backgroundColor = isDayMode ? 'var(--background-color)' : 'var(--text-color)';
 
       // Cambiar el ícono
       iconElement.classList.remove(isDayMode ? 'fa-moon' : 'fa-sun');
