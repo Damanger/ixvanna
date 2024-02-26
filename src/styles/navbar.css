@@ -1,0 +1,37 @@
+.cabecera{
+    background: lightblue;
+    height: 2rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.navbar-nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
+.navbar-right-links {
+    display: flex;
+    margin-right: 2rem;
+}  
+
+.navigation {
+    margin-right: 2rem;
+}
+
+.activo {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.redes-sociales {
+    gap: 0.5rem;
+}  
