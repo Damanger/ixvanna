@@ -4,6 +4,7 @@ body.active-modal {
 
 .btn-modal {
     margin-left: 91%;
+    margin-bottom: 0.5rem;
 }
 
 .modal, .overlay {
