@@ -83,7 +83,7 @@ export default function Designs(){
                                         <p>Pregunte por disponibilidad:
                                             <SocialIcon url={`https://wa.me/529511943244/?text=Hola,%20buen%20día%20,quisiera%20información%20sobre%20este%20modelo:%20${post.mainImage.asset.url}`} network="whatsapp" className="redes" target="_blank" fgColor="#fff" style={{height:25, width:25}}></SocialIcon>
                                         </p>
-                                        También encuentrelos en el siguiente link: <a href={post.href}><FaLink /></a>
+                                        Ordénalos aquí: <a href={post.href}><FaLink /></a>
                                     </div>
                                 </div>
                             </div>
