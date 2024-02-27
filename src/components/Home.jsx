@@ -39,7 +39,7 @@ export default function Home(){
             <section className="section-container">
                 <div className="section-content animate">
                     <div>
-                        <h1>Nuestras clientas nos aman ❤️</h1>
+                        <h1>Nuestras clientas nos aman 💜</h1>
                         <p className="texto">
                             A nuestras clientas les encantan nuestros productos y el servicio que brindamos. Estas son algunas de las reseñas de nuestras felices
                             clientas.
