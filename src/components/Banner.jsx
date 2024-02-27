@@ -11,7 +11,12 @@ export default function Banner() {
             mainImage{
                 asset->{
                     _id,
-                    url
+                    url,
+                    metadata {
+                        dimensions {
+                            aspectRatio
+                        }
+                    }
                 },
                 alt
             }
@@ -23,9 +28,13 @@ export default function Banner() {
     return (
         <main className="banner">
             {banners.map((banner, index) => (
-                <div key={index}>
-                    <h2>{banner.title}</h2>
-                    <img src={banner.mainImage.asset.url} alt={banner.mainImage.alt} />
+                <div key={index} className="banner-container">
+                    <h1 className="banner-title">Ixvanna Diseños</h1>
+                    <img 
+                        src={banner.mainImage.asset.url} 
+                        alt={banner.mainImage.alt} 
+                        style={{ width: "100%", height: "auto" }} // Asegura que la imagen ocupe todo el ancho y mantenga su relación de aspecto
+                    />
                 </div>
             ))}
         </main>

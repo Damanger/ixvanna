@@ -1,3 +1,40 @@
 .banner{
-    margin-top: 2rem;
+    margin-top: 2.2rem;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-size: 7rem;
+    opacity: 0.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 540px){
+    .banner-title{
+        font-size: 4rem;
+        top: 30%;
+    }
+}
+
+@media(max-width: 280px){
+    .banner-title{
+        font-size: 3rem;
+    }
 }
