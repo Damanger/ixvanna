@@ -6,10 +6,10 @@ import '../styles/home.css'
 export default function Home(){
     return(
         <main>
+            <div className="scroll-watcher"></div>
             <Banner></Banner>
-            <img src="" alt="x" />
             <section className="section-container">
-                <div className="section-content">
+                <div className="section-content animate">
                     <div>
                         <h1>Colección 2024</h1>
                         <p>
@@ -21,10 +21,13 @@ export default function Home(){
                             <button className="disenios" >Ver los diseños</button>
                         </Link>
                     </div>
+                    <p className="link2">
+                        Explora nuestra colección en nuestro 👉🏼 <a href="https://ixvannadisenos.catalog.kyte.site/" target="_blank" rel="noreferrer">Catálogo</a> 👈🏼.
+                    </p>
                 </div>
             </section>
             <section className="section-container">
-                <div className="section-content">
+                <div className="section-content animate">
                     <div>
                         <h1>Nuestras clientas nos aman ❤️</h1>
                         <p>
@@ -32,11 +35,11 @@ export default function Home(){
                             clientas.
                         </p>
                     </div>
-                    <div className="quotes-container">
+                    <div className="quotes-container animate">
                         <div className="quote-item">
-                            <img alt="User 1" height="150" src="/placeholder.svg" width="150" className="user-image"/>
+                            <img alt="User 1" height="150" src="./testimonio_1.jpeg" width="150" className="user-image"/>
                             <blockquote className="quote">
-                                The products are amazing and the customer service is excellent. I will definitely be shopping here again.
+                                Me encantan los aretes de Ixvanna Diseños porque son únicos, originales y a muy buen precio!
                             </blockquote>
                             <p className="user-name">- Eyra Ramírez 🇺🇸</p>
                         </div>
@@ -45,7 +48,7 @@ export default function Home(){
                             <blockquote className="quote">
                                 I'm really impressed with the quality of the products I received. The shipping was fast and the items were well packaged.
                             </blockquote>
-                            <p className="user-name">- Customer 2</p>
+                            <p className="user-name">- Areli Padrón 🇺🇸</p>
                         </div>
                     </div>
                     <div className="button-container">

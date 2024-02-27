@@ -6,6 +6,7 @@ import Designs from './components/Designs';
 import Error from './components/Error';
 import Cargando from './components/Cargando';
 import Footer from './components/Footer';
+import './App.css'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

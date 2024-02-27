@@ -11,67 +11,9 @@
   />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/ixvanna_logo.png" />
   <title>Ixvanna Diseños</title>
-  <!-- Agregar FontAwesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    #toggleButton {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
-    #toggleButton:focus {
-      outline: none;
-    }
-
-    #toggleButton .far.fa-moon, #toggleButton .far.fa-sun {
-      color: white;
-    }
-
-    :root {
-      --background-color: aliceblue;
-      --text-color: #030712;
-    }
-
-    body {
-      background-color: var(--background-color);
-    }
-
-    body[style*="background-color: var(--text-color)"] h1,
-    body[style*="background-color: var(--text-color)"] h2,
-    body[style*="background-color: var(--text-color)"] blockquote,
-    body[style*="background-color: var(--text-color)"] p {
-      color: aliceblue;
-    }
-
-    @media (max-width: 768px) {
-    #toggleButton{
-      font-size: 0.5rem;
-    }
-}
-  </style>
 </head>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <button id="toggleButton" style="position: absolute; margin-top: 0.5rem; right: 0%; margin-right: 0.8rem;">
-    <i class="far fa-sun" id="icon"></i>
-  </button>
   <div id="root"></div>
-  <script>
-    const iconElement = document.getElementById('icon');
-    let isDayMode = true;
-
-    document.getElementById('toggleButton').addEventListener('click', function() {
-      // Cambiar entre modo día y noche
-      isDayMode = !isDayMode;
-
-      // Cambiar el color del fondo del body
-      document.body.style.backgroundColor = isDayMode ? 'var(--background-color)' : 'var(--text-color)';
-
-      // Cambiar el ícono
-      iconElement.classList.remove(isDayMode ? 'fa-moon' : 'fa-sun');
-      iconElement.classList.add(isDayMode ? 'fa-sun' : 'fa-moon');
-    });
-  </script>
 </body>
 </html>
