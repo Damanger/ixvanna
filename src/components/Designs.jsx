@@ -3,13 +3,19 @@ import sanityClient from '../client'
 import BlockContent from "@sanity/block-content-to-react"
 import { SocialIcon } from 'react-social-icons'
 import { FaLink } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import '../styles/designs.css'
+import Modal from "./Modal";
 
 export default function Designs(){
-    const [postData, setPost] = useState(null);
+    const [postData, setPostData] = useState(null);
+    const [filterOption, setFilterOption] = useState("A-Z");
 
     useEffect(() => {
+        // Fetch de los datos y ordenación inicial
+        fetchAndSortData(filterOption);
+    }, [filterOption]); // Ejecutar efecto cuando cambie la opción de filtrado
+
+    const fetchAndSortData = (option) => {
         sanityClient.fetch(`*[_type == "post"]{
             title,
             mainImage{
@@ -24,15 +30,38 @@ export default function Designs(){
             price,
             href
         }`)
-        .then((data) => setPost(data))
+        .then((data) => {
+            // Ordenar los datos según la opción de filtrado
+            const sortedData = sortData(data, option);
+            setPostData(sortedData);
+        })
         .catch(console.error);
-    }, []);
+    };
+
+    const sortData = (data, option) => {
+        switch(option) {
+            case "A-Z":
+                return data.sort((a, b) => a.title.localeCompare(b.title));
+            case "Z-A":
+                return data.sort((a, b) => b.title.localeCompare(a.title));
+            case "menor-mayor":
+                return data.sort((a, b) => a.price - b.price);
+            case "mayor-menor":
+                return data.sort((a, b) => b.price - a.price);
+            default:
+                return data;
+        }
+    };
+
+    const handleFilterChange = (option) => {
+        setFilterOption(option);
+    };
 
     return(
         <main className="diseños">
             <section>
-            <div className="scroll-watcher"></div>
                 <h1>Diseños</h1>
+                <p style={{marginLeft:'94%'}}>Filtrar:</p><Modal onFilterChange={handleFilterChange} />
                 <div className="cards">
                     { postData && postData.map((post, index) => (
                         <article key={index}>
@@ -45,7 +74,7 @@ export default function Designs(){
                                         <p>Pregunte por disponibilidad:
                                             <SocialIcon url={`https://wa.me/529511943244/?text=Hola,%20buen%20día%20,quisiera%20información%20sobre%20este%20modelo:%20${post.mainImage.asset.url}`} network="whatsapp" className="redes" target="_blank" fgColor="#fff" style={{height:25, width:25}}></SocialIcon>
                                         </p>
-                                        También encuentrelos en el siguiente link: <a href={post.href}><FaLink></FaLink></a>
+                                        También encuentrelos en el siguiente link: <a href={post.href}><FaLink /></a>
                                     </div>
                                 </div>
                             </div>
