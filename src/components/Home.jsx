@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Banner from "./Banner";
 import '../styles/home.css'
 
 export default function Home(){
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY; // Obtener la posición de desplazamiento vertical
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight; // Calcular la altura total de la página
+            const scrolled = (scrollTop / scrollHeight) * 100; // Calcular el porcentaje de desplazamiento
+
+            const scrollWatcher = document.querySelector('.scroll-watcher');
+            scrollWatcher.style.width = scrolled + '%'; // Establecer el ancho de la barra de desplazamiento según el porcentaje de desplazamiento
+        });
+    }, []);
     return(
         <main>
             <div className="scroll-watcher"></div>

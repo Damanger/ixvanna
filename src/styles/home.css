@@ -1,14 +1,12 @@
-.scroll-watcher{
+.scroll-watcher {
+    background-color: #fd64fd;
     height: 4px;
     position: fixed;
     bottom: 0;
-    z-index: 100;
-    background-color: #fd64fd;
-    width: 100%;
-    scale: 0 1;
-    transform-origin: left;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll(y);
+    left: 0;
+    width: 0; /* Por defecto, la barra de desplazamiento está oculta */
+    z-index: 1000;
+    transition: width 0.3s ease; /* Agregamos una transición para suavizar el cambio de tamaño */
 }
 
 h1 {
