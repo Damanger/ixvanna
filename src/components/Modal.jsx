@@ -46,6 +46,11 @@ export default function Modal({ onFilterChange }) {
                                 <input type="radio" value="mayor-menor" checked={selectedOption === "mayor-menor"} readOnly />
                                 <span>Mayor a menor precio</span>
                             </label>
+                            <br />
+                            <label onClick={() => handleOptionChange("fecha")}>
+                                <input type="radio" value="fecha" checked={selectedOption === "fecha"} readOnly />
+                                <span>Filtrar por fecha</span>
+                            </label>
                         </p>
                         <button className="close-modal filtrado" onClick={toggleModal}>
                             <FaTimes />
