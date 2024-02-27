@@ -13,6 +13,14 @@ export default function Designs(){
     useEffect(() => {
         // Fetch de los datos y ordenación inicial
         fetchAndSortData(filterOption);
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY; // Obtener la posición de desplazamiento vertical
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight; // Calcular la altura total de la página
+            const scrolled = (scrollTop / scrollHeight) * 100; // Calcular el porcentaje de desplazamiento
+
+            const scrollWatcher = document.querySelector('.scroll-watcher');
+            scrollWatcher.style.width = scrolled + '%'; // Establecer el ancho de la barra de desplazamiento según el porcentaje de desplazamiento
+        });
     }, [filterOption]); // Ejecutar efecto cuando cambie la opción de filtrado
 
     const fetchAndSortData = (option) => {
@@ -59,9 +67,10 @@ export default function Designs(){
 
     return(
         <main className="diseños">
+            <div className="scroll-watcher"></div>
             <section>
                 <h1>Diseños</h1>
-                <p style={{marginLeft:'94%'}}>Filtrar:</p><Modal onFilterChange={handleFilterChange} />
+                <p style={{marginLeft:'90%'}}>Filtrar:</p><Modal onFilterChange={handleFilterChange} />
                 <div className="cards">
                     { postData && postData.map((post, index) => (
                         <article key={index}>
