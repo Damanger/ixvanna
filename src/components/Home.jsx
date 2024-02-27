@@ -12,7 +12,7 @@ export default function Home(){
                 <div className="section-content animate">
                     <div>
                         <h1>Colección 2024</h1>
-                        <p>
+                        <p className="texto">
                             ¡Descubre nuestra nueva colección del 2024! Sumérgete en el fascinante mundo de la artesanía oaxaqueña y encuentra la pieza perfecta para resaltar tu estilo único. Nuestros aretes bordados a mano son una expresión auténtica de la tradición y la belleza de nuestra cultura. ¡Explora ahora y lleva contigo un pedacito de Oaxaca!
                         </p>
                     </div>
@@ -30,7 +30,7 @@ export default function Home(){
                 <div className="section-content animate">
                     <div>
                         <h1>Nuestras clientas nos aman ❤️</h1>
-                        <p>
+                        <p className="texto">
                             A nuestras clientas les encantan nuestros productos y el servicio que brindamos. Estas son algunas de las reseñas de nuestras felices
                             clientas.
                         </p>
