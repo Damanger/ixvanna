@@ -56,7 +56,7 @@ export default function Home(){
                         <div className="quote-item">
                             <img alt="User 2" height="150" src="https://raw.githubusercontent.com/Damanger/ixvanna/main/public/clienta0.png" width="150" className="user-image"/>
                             <blockquote className="quote">
-                                I'm really impressed with the quality of the products I received. The shipping was fast and the items were well packaged.
+                                Estos aretes son mis favoritos! Los amo con cada outfit.. Gracias por crear algo tan especial.
                             </blockquote>
                             <p className="user-name">- Areli Padrón 🇺🇸</p>
                         </div>
