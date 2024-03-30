@@ -70,7 +70,7 @@ export default function Designs(){
             <div className="scroll-watcher"></div>
             <section>
                 <h1>Diseños</h1>
-                <p style={{marginLeft:'90%'}}>Filtrar:</p><Modal onFilterChange={handleFilterChange} />
+                <p style={{marginLeft:'90%'}}>Filtrar:</p><Modal onFilterChange={handleFilterChange}/>
                 <div className="cards">
                     { postData && postData.map((post, index) => (
                         <article key={index}>
