@@ -32,7 +32,7 @@ export default function Banner() {
                     <h1 className="banner-title">Ixvanna Diseños</h1>
                     <img 
                         src={banner.mainImage.asset.url} 
-                        alt={banner.mainImage.alt} 
+                        alt='Imagen Banner' 
                         style={{ width: "100%", height: "auto" }}
                     />
                 </div>
