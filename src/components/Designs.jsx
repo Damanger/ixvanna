@@ -23,7 +23,7 @@ export default function Designs(){
         });
     }, [filterOption]); // Ejecutar efecto cuando cambie la opción de filtrado
 
-    const fetchAndSortData = (option) => {
+    function fetchAndSortData(option) {
         sanityClient.fetch(`*[_type == "post"]{
             title,
             mainImage{
@@ -38,13 +38,13 @@ export default function Designs(){
             price,
             href
         }`)
-        .then((data) => {
-            // Ordenar los datos según la opción de filtrado
-            const sortedData = sortData(data, option);
-            setPostData(sortedData);
-        })
-        .catch(console.error);
-    };
+            .then((data) => {
+                // Ordenar los datos según la opción de filtrado
+                const sortedData = sortData(data, option);
+                setPostData(sortedData);
+            })
+            .catch(console.error);
+    }
 
     const sortData = (data, option) => {
         switch(option) {

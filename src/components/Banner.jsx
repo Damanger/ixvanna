@@ -33,7 +33,7 @@ export default function Banner() {
                     <img 
                         src={banner.mainImage.asset.url} 
                         alt={banner.mainImage.alt} 
-                        style={{ width: "100%", height: "auto" }} // Asegura que la imagen ocupe todo el ancho y mantenga su relación de aspecto
+                        style={{ width: "100%", height: "auto" }}
                     />
                 </div>
             ))}

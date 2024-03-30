@@ -13,11 +13,11 @@ function App() {
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 2000);
+  }, 1500);
   return (
     <Router>
       {isLoading ? (
-        <Cargando imagen="./ixvanna.jpeg" />
+        <Cargando imagen="https://raw.githubusercontent.com/Damanger/ixvanna/main/public/ixvanna.jpeg" />
       ) : (
         <>
         <Navbar/>

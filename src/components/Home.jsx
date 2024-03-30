@@ -47,14 +47,14 @@ export default function Home(){
                     </div>
                     <div className="quotes-container animate">
                         <div className="quote-item">
-                            <img alt="User 1" height="150" src="./testimonio_1.jpeg" width="150" className="user-image"/>
+                            <img alt="User 1" height="150" src="https://raw.githubusercontent.com/Damanger/ixvanna/main/public/testimonio_1.jpeg" width="150" className="user-image"/>
                             <blockquote className="quote">
                                 Me encantan los aretes de Ixvanna Diseños porque son únicos, originales y a muy buen precio!
                             </blockquote>
                             <p className="user-name">- Eyra Ramírez 🇺🇸</p>
                         </div>
                         <div className="quote-item">
-                            <img alt="User 2" height="150" src="./clienta0.png" width="150" className="user-image"/>
+                            <img alt="User 2" height="150" src="https://raw.githubusercontent.com/Damanger/ixvanna/main/public/clienta0.png" width="150" className="user-image"/>
                             <blockquote className="quote">
                                 I'm really impressed with the quality of the products I received. The shipping was fast and the items were well packaged.
                             </blockquote>
